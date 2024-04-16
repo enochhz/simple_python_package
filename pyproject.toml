@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "py-pkg-test"
+version = "0.1.0"
+description = ""
+authors = ["enochhz <enochhaozheng@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "*", from = "src"}
+]
+
+[tool.poetry.scripts]
+hello = "hello_app.hello_main:main"
+bye = "bye_app.bye_main:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
